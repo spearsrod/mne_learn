@@ -137,6 +137,7 @@ mlab.scalarbar(points, title='Beta Band Phase Lag Index (PLI)', nb_labels=4)
 nodes_shown = list(set([n[0] for n in con_nodes] +
                        [n[1] for n in con_nodes]))
 
+print(nodes_shown)
 for node in nodes_shown:
     x, y, z = sens_loc[node]
     mlab.text3d(x, y, z, raw.ch_names[picks[node]], scale=0.005,
